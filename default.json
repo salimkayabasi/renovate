@@ -1,0 +1,93 @@
+{
+  "description": [
+    "Default preset for all projects"
+  ],
+  "extends": [
+    "config:base",
+    "group:definitelyTyped",
+    "group:linters",
+    "group:googleapis",
+    "group:test",
+    "group:monorepos",
+    "group:nodeJs",
+    "preview:dockerCompose",
+    "preview:dockerVersions",
+    ":label(renovate)",
+    ":timezone(Europe/Berlin)",
+    ":enableVulnerabilityAlertsWithLabel(vulnerability)",
+    ":combinePatchMinorReleases",
+    ":rebaseStalePrs",
+    ":automergeDisabled",
+    ":maintainLockFilesWeekly",
+    ":preserveSemverRanges",
+    ":prImmediately",
+    ":maintainLockFilesDisabled"
+  ],
+  "enabled": true,
+  "commitMessagePrefix": "RNVT-0: ",
+  "branchConcurrentLimit": 3,
+  "npm": {
+    "postUpdateOptions": [
+      "npmDedupe"
+    ]
+  },
+  "packageRules": [
+    {
+      "allowedVersions": "<1.19 || >1.19",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "nginx"
+      ]
+    },
+    {
+      "allowedVersions": "<=14",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "cimg/node",
+        "circleci/node",
+        "node"
+      ]
+    },
+    {
+      "matchDatasources": [
+        "npm"
+      ],
+      "labels": [
+        "renovate",
+        "npm-update"
+      ]
+    },
+    {
+      "matchDatasources": [
+        "terraform-module",
+        "terraform-provider"
+      ],
+      "labels": [
+        "renovate",
+        "terraform-update"
+      ]
+    },
+    {
+      "labels": [
+        "renovate",
+        "update-major"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "renovate",
+      "security"
+    ],
+    "schedule": [
+      "at any time"
+    ]
+  }
+}

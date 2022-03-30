@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "local>salimkayabasi/renovate"
+  ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchDatasources": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "renovate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "renovate",
+  "version": "1.0.0",
+  "description": "renovate preset",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salimkayabasi/renovate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salimkayabasi/renovate/issues"
+  },
+  "homepage": "https://github.com/salimkayabasi/renovate#readme",
+  "devDependencies": {
+    "ajv-cli": "^5.0.0",
+    "renovate": "^32.10.2"
+  }
+}
